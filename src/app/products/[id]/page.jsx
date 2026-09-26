@@ -9,11 +9,12 @@ const ProductDetails = async ({ params }) => {
   const { title, description, price, image, stock } = data;
 //   console.log(title);
   return (
-    <div className="flex w-full items-center justify-center">
-      <div className="grid w-full max-w-2xl grid-cols-12 gap-4 p-4">
+    <div className="grid w-full h-screen items-center justify-center border">
+      <div className="grid w-full max-w-2xl grid-cols-12 gap-4 p-4 border ">
         {/* Row 1: Large Product Card - Available Soon */}
-        <Card className="col-span-12 flex h-auto min-h-[152px] flex-col sm:flex-row">
-          <div className="relative h-[140px] w-full shrink-0 overflow-hidden rounded-2xl sm:h-[120px] sm:w-[120px]">
+        <Card className="col-span-12 flex h-auto min-h-[270px] flex-col sm:flex-row">
+          
+          <div className="relative h-[300px] w-full shrink-0 overflow-hidden rounded-2xl sm:h-auto sm:w-1/2">
             <img
               alt="Cherries"
               className="pointer-events-none absolute inset-0 h-full w-full scale-125 object-cover select-none"
@@ -21,7 +22,7 @@ const ProductDetails = async ({ params }) => {
               src={image}
             />
           </div>
-          <div className="flex flex-1 flex-col gap-3">
+          <div className="flex flex-1 flex-col gap-3 sm:w-1/2">
             <Card.Header className="gap-1">
               <Card.Title className="pe-8">{title}</Card.Title>
               <Card.Description>{description}</Card.Description>
