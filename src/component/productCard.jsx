@@ -2,7 +2,7 @@ import {CircleDollar} from "@gravity-ui/icons";
 import {Button, Card, Link} from "@heroui/react";
 
 export function ProductCard({product}) {
-    console.log(product)
+    // console.log(product)
   return (
     <Card className="w-[400px]">
       <img
@@ -22,7 +22,7 @@ export function ProductCard({product}) {
       <Card.Footer>
         <Link
           
-          href="/"
+          href={`/products/${product._id}`}
          
         ><Button>View Details</Button>
           
