@@ -1,8 +1,9 @@
+import PopularProducts from "@/component/PopularProducts";
 
 export default function Home() {
   return (
-   <div>
-      
+   <div className="grid justify-center items-center">
+      <PopularProducts/>
    </div>
   );
 }
