@@ -7,7 +7,7 @@ const ProductDetails = async ({ params }) => {
   const { id } = pageParams;
   const data = await getProductById(id);
   const { title, description, price, image, stock } = data;
-//   console.log(title);
+  // console.log(title);
   return (
     <div className="grid w-full h-screen items-center justify-center border">
       <div className="grid w-full max-w-2xl grid-cols-12 gap-4 p-4 border ">
