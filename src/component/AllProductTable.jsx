@@ -1,6 +1,7 @@
 import { getAllData } from "@/lib/product/data";
-import {Table} from "@heroui/react";
+import {Button, Table} from "@heroui/react";
 import { DeleteModal } from "./DeleteModal";
+import Link from "next/link";
 
 export async function  AllProductTable () {
     const products = await getAllData()
@@ -22,11 +23,11 @@ export async function  AllProductTable () {
               <Table.Cell>{product.price}</Table.Cell>
               <Table.Cell>{product.stock}</Table.Cell>
               <Table.Cell>
-                 {/* <Link href={`/products/${product._id}/edit`}>
+                 <Link href={`/products/${product._id}/edit`}>
                  <Button className="mr-2">
                      Edit
                  </Button>
-                 </Link> */}
+                 </Link>
                   <DeleteModal 
                   productId={product._id}
                   />

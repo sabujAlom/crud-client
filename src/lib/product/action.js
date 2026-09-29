@@ -37,3 +37,34 @@ export const deleteProduct = async(id)=>{
     revalidatePath("/products")
     return data;
 }
+
+// updated product.........................
+export const updateProduct = async(id, formData)=>{
+    // console.log(id)
+    const updateProduct = Object.fromEntries(formData.entries());
+    
+    const modifiedData ={
+        title: updateProduct.title,
+        price: parseFloat(updateProduct.price),
+        stock: parseFloat(updateProduct.stock),
+        description: updateProduct.description,
+        image: updateProduct.image,
+    };
+
+    const res = await fetch(`http://localhost:8000/products/${id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(modifiedData)
+    });
+     if(!res.ok){
+        throw new Error("Failed to updated product");
+    }
+    
+    const data = await res.json();
+    revalidatePath("/products");
+    return data;
+
+
+}
