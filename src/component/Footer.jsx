@@ -19,7 +19,7 @@ const Footer = () => {
             <p className="mt-4 max-w-xs text-sm leading-6 text-gray-400">
               {" "}
               A simple and modern product management application built with
-              Next.js, Express.js and MongoDB.{" "}
+              Next.js, Express.js and MongoDB mongodb.{" "}
             </p>{" "}
           </div>{" "}
           {/* Quick Links */}{" "}
