@@ -79,7 +79,7 @@ const Footer = () => {
             </h3>{" "}
             <div className="space-y-3 text-sm text-gray-400">
               {" "}
-              <p>Email: example@gmail.com</p> <p>Bangladesh</p>{" "}
+              <p>Email: sabujalom18@gmail.com</p> <p>Bangladesh</p>{" "}
             </div>{" "}
             {/* Social Links */}{" "}
             <div className="mt-5 flex gap-4">
